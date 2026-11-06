@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tambah Buku | Perpustakaan Kelas</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <header class="bg-blue-900 text-white p-5">
+        <h1 class="text-2xl font-bold">
+            Perpustakaan Kelas
+        </h1>
+    </header>
+
+    <main class="max-w-3xl mx-auto p-6">
+
+        <!-- Navigasi -->
+        <a href="../index.html"
+           class="text-blue-700 hover:underline">
+            ← Kembali ke Dashboard
+        </a>
+
+        <!-- Form Tambah Buku -->
+        <section class="bg-white rounded-xl shadow-sm p-6 mt-5">
+
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">
+                Tambah Buku
+            </h2>
+
+            <p class="text-gray-500 mb-6">
+                Masukkan informasi buku yang ingin ditambahkan.
+            </p>
+
+            <form id="form-buku" class="space-y-4">
+
+                <div>
+                    <label class="block font-medium mb-1">
+                        Kategori
+                    </label>
+                    <select id="id_kategori" required class="w-full border rounded-lg p-3 bg-white">
+                        <option value="">Pilih Kategori</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-1">
+                        Judul Buku
+                    </label>
+                    <input
+                        type="text"
+                        id="judul_buku"
+                        required
+                        class="w-full border rounded-lg p-3"
+                    >
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-1">
+                        Penulis
+                    </label>
+                    <input
+                        type="text"
+                        id="penulis"
+                        required
+                        class="w-full border rounded-lg p-3"
+                    >
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-1">
+                        Penerbit
+                    </label>
+                    <input
+                        type="text"
+                        id="penerbit"
+                        required
+                        class="w-full border rounded-lg p-3"
+                    >
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-1">
+                        Tahun Terbit
+                    </label>
+                    <input
+                        type="number"
+                        id="tahun_terbit"
+                        required
+                        class="w-full border rounded-lg p-3"
+                    >
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-1">
+                        Stok
+                    </label>
+                    <input
+                        type="number"
+                        id="stok"
+                        min="0"
+                        required
+                        class="w-full border rounded-lg p-3"
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full bg-blue-700 text-white font-semibold p-3 rounded-lg hover:bg-blue-800"
+                >
+                    Simpan Buku
+                </button>
+
+            </form>
+
+            <p id="pesan" class="mt-4 text-sm"></p>
+
+        </section>
+    </main>
+
+    <script src="../assets/tambah-buku.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman Buku | Perpustakaan Gandini</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-slate-100 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-blue-950 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+            <div>
+                <h1 class="text-2xl font-bold">
+                    Perpustakaan Gandini
+                </h1>
+                <p class="text-blue-200 text-sm mt-1">
+                    Sistem Informasi Peminjaman Buku
+                </p>
+            </div>
+
+            <nav class="flex flex-wrap gap-3 text-sm">
+                <a href="../index.html"
+                   class="px-4 py-2 rounded-lg hover:bg-blue-800 transition">
+                    Dashboard
+                </a>
+
+                <a href="peminjaman.html"
+                   class="bg-blue-800 px-4 py-2 rounded-lg">
+                    Peminjaman
+                </a>
+
+                <a href="riwayat-peminjaman.html"
+                   class="px-4 py-2 rounded-lg hover:bg-blue-800 transition">
+                    Riwayat
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Konten -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+
+        <div class="mb-8">
+            <p class="text-sm font-semibold text-blue-700 uppercase tracking-wider">
+                Transaksi
+            </p>
+
+            <h2 class="text-3xl font-bold text-slate-900 mt-1">
+                Peminjaman Buku
+            </h2>
+
+            <p class="text-slate-500 mt-2">
+                Isi formulir berikut untuk mencatat peminjaman buku.
+            </p>
+        </div>
+
+
+        <!-- Form -->
+        <section class="max-w-2xl mx-auto bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+
+            <div class="bg-blue-50 border-b border-blue-100 px-6 py-5">
+                <h3 class="text-lg font-bold text-blue-950">
+                    Formulir Peminjaman
+                </h3>
+
+                <p class="text-sm text-slate-500 mt-1">
+                    Lengkapi informasi peminjam dan buku yang dipilih.
+                </p>
+            </div>
+
+
+            <form id="form-peminjaman" class="p-6 space-y-5">
+
+                <!-- Pilih Buku -->
+                <div>
+                    <label for="id_buku"
+                        class="block text-sm font-semibold text-slate-700 mb-2">
+                        Pilih Buku
+                    </label>
+
+                    <select
+                        id="id_buku"
+                        required
+                        class="w-full border border-slate-300 rounded-lg px-4 py-3 bg-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+
+                        <option value="">Memuat buku...</option>
+
+                    </select>
+
+                    <p class="text-xs text-slate-400 mt-2">
+                        Pilih buku yang ingin dipinjam.
+                    </p>
+                </div>
+
+
+                <!-- Nama Peminjam -->
+                <div>
+                    <label for="nama_peminjam"
+                        class="block text-sm font-semibold text-slate-700 mb-2">
+                        Nama Peminjam
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama_peminjam"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                        class="w-full border border-slate-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                </div>
+
+
+                <!-- Kelas -->
+                <div>
+                    <label for="kelas"
+                        class="block text-sm font-semibold text-slate-700 mb-2">
+                        Kelas
+                    </label>
+
+                    <input
+                        type="text"
+                        id="kelas"
+                        placeholder="Contoh: XI RPL B"
+                        required
+                        class="w-full border border-slate-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                </div>
+
+
+                <!-- Tombol -->
+                <div class="pt-3">
+                    <button
+                        type="submit"
+                        class="w-full bg-blue-700 text-white font-semibold py-3 rounded-lg hover:bg-blue-800 active:scale-[0.99] transition shadow-sm">
+
+                        Pinjam Buku
+
+                    </button>
+                </div>
+
+
+                <!-- Pesan -->
+                <p id="pesan" class="text-sm text-center" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+        <footer class="text-center text-sm text-slate-400 mt-10">
+            &copy; 2026 Perpustakaan Gandini.
+        </footer>
+
+    </main>
+
+    <script src="../assets/peminjaman.js" defer></script>
+
+</body>
+</html>

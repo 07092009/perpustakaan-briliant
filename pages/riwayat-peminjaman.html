@@ -1,0 +1,134 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Peminjaman | Perpustakaan Gandini</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-slate-100 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-blue-950 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+            <div>
+                <h1 class="text-2xl font-bold">
+                    Perpustakaan Gandini
+                </h1>
+                <p class="text-blue-200 text-sm mt-1">
+                    Sistem Informasi Peminjaman Buku
+                </p>
+            </div>
+
+            <nav class="flex flex-wrap gap-3 text-sm">
+                <a href="../index.html"
+                   class="px-4 py-2 rounded-lg hover:bg-blue-800 transition">
+                    Dashboard
+                </a>
+
+                <a href="peminjaman.html"
+                   class="px-4 py-2 rounded-lg hover:bg-blue-800 transition">
+                    Peminjaman
+                </a>
+
+                <a href="riwayat-peminjaman.html"
+                   class="bg-blue-800 px-4 py-2 rounded-lg">
+                    Riwayat
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Konten Utama -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+
+        <!-- Judul -->
+        <section class="mb-8">
+
+            <p class="text-sm font-semibold text-blue-700 uppercase tracking-wider">
+                Data Transaksi
+            </p>
+
+            <h2 class="text-3xl font-bold text-slate-900 mt-1">
+                Riwayat Peminjaman
+            </h2>
+
+            <p class="text-slate-500 mt-2">
+                Kelola dan pantau seluruh aktivitas peminjaman buku.
+            </p>
+
+        </section>
+
+
+        <!-- Tabel Riwayat -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+
+            <div class="px-6 py-5 border-b border-slate-200">
+
+                <h3 class="font-bold text-lg text-slate-800">
+                    Daftar Transaksi
+                </h3>
+
+                <p class="text-sm text-slate-500 mt-1">
+                    Informasi peminjaman dan pengembalian buku.
+                </p>
+
+            </div>
+
+
+            <div class="overflow-x-auto">
+
+                <table class="w-full min-w-[1050px] text-left text-sm">
+
+                    <thead class="bg-slate-50 text-slate-500 uppercase text-xs">
+
+                        <tr>
+                            <th class="px-5 py-4">ID</th>
+                            <th class="px-5 py-4">Judul Buku</th>
+                            <th class="px-5 py-4">Peminjam</th>
+                            <th class="px-5 py-4">Kelas</th>
+                            <th class="px-5 py-4">Tanggal Pinjam</th>
+                            <th class="px-5 py-4">Tanggal Kembali</th>
+                            <th class="px-5 py-4">Status</th>
+                            <th class="px-5 py-4 text-center">Aksi</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="daftar-peminjaman"
+                        class="divide-y divide-slate-100 text-slate-700">
+
+                        <tr>
+                            <td colspan="8" class="p-5 text-center text-slate-400">
+                                Memuat data...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="text-center text-sm text-slate-400 mt-10">
+            &copy; 2026 Perpustakaan Gandini.
+        </footer>
+
+    </main>
+
+
+    <script src="../assets/riwayat-peminjaman.js" defer></script>
+
+</body>
+</html>
